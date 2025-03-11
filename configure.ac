@@ -50,7 +50,7 @@ AC_CONFIG_SRCDIR([lib/uuid.cxx])
 AC_CONFIG_FILES([
   Makefile
   lib/Makefile
-  test/Makefile
+  bin/Makefile
 ])
 
 AC_OUTPUT
