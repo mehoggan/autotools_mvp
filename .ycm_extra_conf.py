@@ -24,6 +24,7 @@ import ycm_core
 # CHANGE THIS LIST OF FLAGS. YES, THIS IS THE DROID YOU HAVE BEEN LOOKING FOR.
 flags = [
     '-I', '/Users/matthew.hoggan/Devel/gitlab/mehoggan/autotools_mvp/include',
+    '-I', '/usr/local/boost/include',
     '-I', '/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1',
     '-I', '/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include',
     '-isystem', '/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1',

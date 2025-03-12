@@ -10,11 +10,11 @@ endif
 libautotools_mvp_la_SOURCES = logging.cxx \
     uuid.cxx
 
-libautotools_mvp_la_LIBADD = -lboost_log -lboost_system
+libautotools_mvp_la_LIBADD = -lboost_log -lboost_system -lboost_thread 
 if LINUX
-libautotools_mvp_la_LIBADD += $(INIT_LIBS) -lboost_thread -lm
+libautotools_mvp_la_LIBADD += $(INIT_LIBS) -lm
 else
-libautotools_mvp_la_LIBADD += -lboost_thread-mt $(INIT_LIBS)
+libautotools_mvp_la_LIBADD += $(INIT_LIBS) 
 endif
 
 libautotools_mvp_la_LDFLAGS = -uuid -Wl,-ld_classic -pthread

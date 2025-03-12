@@ -21,8 +21,9 @@
     ossp-uuid
 > echo "export PKG_CONFIG_PATH=$(which pkg-config)" >> ~/.bash_profile
 > echo "export HOMEBREW_PREFIX=$(brew --prefix)" >> ~/.bash_profile
-> echo "export LDFLAGS=\"-L${HOMEBREW_PREFIX}/lib\"" >> ~/.bash_profile
-> echo "export CPPFLAGS=\"-I${HOMEBREW_PREFIX}/include\"" >> ~/.bash_profile
+> # TODO (mehoggan): boost@1.85 formula is the one with the dyld linking issues. Replace with non-brew package.
+> echo "export LDFLAGS=\"-L/usr/local/opt/boost@1.85/lib -L${HOMEBREW_PREFIX}/lib\"" >> ~/.bash_profile
+> echo "export CPPFLAGS=\"-I/usr/local/opt/boost@1.85/include -I${HOMEBREW_PREFIX}/include\"" >> ~/.bash_profile
 > echo "export PKG_CONFIG=$(which pkg-config)" >> ~/.bash_profile
 ```
 
@@ -56,6 +57,12 @@
 > cd build/ && ../configure
 > cd ../
 > make -C build
+```
+
+## Executing the binary executable to validate
+
+```sh
+> ./build/bin/autotools_mvp_runner
 ```
 
 ## Notes on Autoformatting Code
