@@ -1,8 +1,5 @@
 bin_PROGRAMS = autotools_mvp_runner
 
-#####
-# Start of autotools_mvp_runner
-#####
 autotools_mvp_runner_SOURCES = main.cpp
 
 autotools_mvp_runner_CPPFLAGS = -Werror -Wall -pedantic \

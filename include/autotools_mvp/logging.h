@@ -3,6 +3,8 @@
 
 #define BOOST_LOG_DYN_LINK 1
 
+#include <gtest/gtest_prod.h>
+
 #include <atomic>
 #include <boost/filesystem/path.hpp>
 #include <boost/log/sinks/sync_frontend.hpp>
@@ -368,6 +370,9 @@ class Logging {
   static void write_severity_log(const LogTag &tag,
                                  boost::log::trivial::severity_level level,
                                  const std::string &message);
+
+ private:
+  FRIEND_TEST(TestLogging, test_clear_all);
 
  private:
   LogTag tag_;
